@@ -19,14 +19,8 @@ addError() {
 shit() {
     for msg in "${errors[@]}";do
         echo $msg
-    done
+    done 
     exit 1
-}
-
-## TODO
-#Creates tarballs
-compress() {
-    return 0
 }
 
 dirCheck() {
@@ -87,7 +81,3 @@ mv ${date}.tar ${originLoc}
 # Append the confirmed directories to the .tar file
 # confirm message
 #exit
-
-
-
-
