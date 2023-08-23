@@ -37,7 +37,6 @@ dirCheck() {
 }
 
 ### START
-
 echo "Starting backup for user '${user}'"
 homeDir="/home/"$user
 echo "Checking if home dir '${homeDir}' exists..."
