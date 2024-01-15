@@ -16,7 +16,7 @@ addError() {
 }
 
 #prints errors][] and exit 1
-shit() {
+oops() {
   for msg in "${errors[@]}"; do
     echo $msg
   done
@@ -43,7 +43,7 @@ homeDir="/home/"$user
 echo "Checking if home dir '${homeDir}' exists..."
 dirCheck $homeDir
 if [[ $? -ne 0 ]]; then
-  shit
+  oops
 fi
 echo -e "\tHome directory for ${user} found!"
 
@@ -52,7 +52,7 @@ for dir in "${dirsToSave[@]}"; do
   echo -e "Checking if ${userDir} exists..."
   dirCheck $userDir
   if [[ $? -ne 0 ]]; then
-    shit
+    oops
   fi
   echo -e "\tdirectory confirmed!"
   dirsConfirmed=("${dirsConfirmed[@]}" "${userDir}")
